@@ -1,0 +1,368 @@
+{
+	"type":"JOB_FINISHED",
+	"event":
+			{
+				"org.apache.hadoop.mapreduce.jobhistory.JobFinished":
+					{
+						"jobid":"job_1411033758207_0008",
+						"finishTime":1415168481060,
+						"finishedMaps":384,
+						"finishedReduces":200,
+						"failedMaps":0,
+						"failedReduces":0,
+						"totalCounters":
+								{
+									"name":"TOTAL_COUNTERS",
+									"groups":[
+									         {
+									            "name":"org.apache.hadoop.mapreduce.FileSystemCounter",
+									            "displayName":"File System Counters",
+									            "counts":[
+									                       {
+									                            "name":"FILE_BYTES_READ",
+									                            "displayName":"FILE: Number of bytes read",
+									                            "value":29636899215
+									                        },
+									                        {
+									                             "name":"FILE_BYTES_WRITTEN",
+									                             "displayName":"FILE: Number of bytes written",
+									                             "value":43917807112
+									                        },
+									                        {
+									                              "name":"FILE_READ_OPS",
+									                              "displayName":"FILE: Number of read operations",
+									                              "value":0
+									                        },
+									                        {
+									                               "name":"FILE_LARGE_READ_OPS",
+									                               "displayName":"FILE: Number of large read operations",
+									                               "value":0
+									                        },
+									                        {
+									                               "name":"FILE_WRITE_OPS",
+									                               "displayName":"FILE: Number of write operations",
+									                               "value":0
+									                        },
+									                        {
+									                               "name":"HDFS_BYTES_READ",
+									                               "displayName":"HDFS: Number of bytes read",
+									                               "value":50000050304
+									                        },
+									                        {
+									                        		"name":"HDFS_BYTES_WRITTEN",
+									                        		"displayName":"HDFS: Number of bytes written",
+									                        		"value":50000000000
+									                        },
+									                        {
+									                        		"name":"HDFS_READ_OPS",
+									                        		"displayName":"HDFS: Number of read operations",
+									                        		"value":1752
+									                        },
+									                        {
+									                        		"name":"HDFS_LARGE_READ_OPS",
+									                        		"displayName":"HDFS: Number of large read operations",
+									                        		"value":0
+									                        },
+									                        {
+									                        		"name":"HDFS_WRITE_OPS",
+									                        		"displayName":"HDFS: Number of write operations",
+									                        		"value":400
+									                        }
+									                      ]//counters
+									        },
+									        {
+									          	"name":"org.apache.hadoop.mapreduce.JobCounter",
+									          	"displayName":"Job Counters ",
+									          	"counts":[
+									          				{
+									          					"name":"NUM_FAILED_REDUCES",
+									          					"displayName":"Failed reduce tasks",
+									          					"value":4
+									          				},
+									          				{
+									          					"name":"NUM_KILLED_MAPS",
+									          					"displayName":"Killed map tasks",
+									          					"value":3
+									          				},
+									          				{
+									          					"name":"NUM_KILLED_REDUCES",
+									          					"displayName":"Killed reduce tasks",
+									          					"value":7
+									          				},
+									          				{
+									          					"name":"TOTAL_LAUNCHED_MAPS",
+									          					"displayName":"Launched map tasks",
+									          					"value":387
+									          				},
+									          				{
+									          					"name":"TOTAL_LAUNCHED_REDUCES",
+									          					"displayName":"Launched reduce tasks",
+									          					"value":211
+									          				},
+									          				{
+									          					"name":"DATA_LOCAL_MAPS",
+									          					"displayName":"Data-local map tasks",
+									          					"value":380
+									          				},
+									          				{
+									          					"name":"RACK_LOCAL_MAPS",
+									          					"displayName":"Rack-local map tasks",
+									          					"value":7
+									          				},
+									          				{
+									          					"name":"SLOTS_MILLIS_MAPS",
+									          					"displayName":"Total time spent by all maps in occupied slots (ms)",
+									          					"value":28850398
+									          				},
+									          				{
+									          					"name":"SLOTS_MILLIS_REDUCES",
+									          					"displayName":"Total time spent by all reduces in occupied slots (ms)",
+									          					"value":18657557
+									          				},
+									          				{
+									          					"name":"MILLIS_MAPS",
+									          					"displayName":"Total time spent by all map tasks (ms)",
+									          					"value":28850398
+									          				},
+									          				{
+									          					"name":"MILLIS_REDUCES",
+									          					"displayName":"Total time spent by all reduce tasks (ms)",
+									          					"value":18657557
+									          				},
+									          				{
+									          					"name":"VCORES_MILLIS_MAPS",
+									          					"displayName":"Total vcore-seconds taken by all map tasks",
+									          					"value":28850398
+									          				},
+									          				{
+									          					"name":"VCORES_MILLIS_REDUCES",
+									          					"displayName":"Total vcore-seconds taken by all reduce tasks",
+									          					"value":18657557
+									          				},
+									          				{
+									          					"name":"MB_MILLIS_MAPS",
+									          					"displayName":"Total megabyte-seconds taken by all map tasks",
+									          					"value":29542807552
+									          				},
+									          				{
+									          					"name":"MB_MILLIS_REDUCES",
+									          					"displayName":"Total megabyte-seconds taken by all reduce tasks",
+									          					"value":19105338368
+									          				}
+									          		]
+									         },
+									         {
+									         		"name":"org.apache.hadoop.mapreduce.TaskCounter",
+									         		"displayName":"Map-Reduce Framework",
+									         		"counts":[
+									         					{
+									         						"name":"MAP_INPUT_RECORDS",
+									         						"displayName":"Map input records",
+									         						"value":500000000
+									         					},
+									         					{
+									         						"name":"MAP_OUTPUT_RECORDS",
+									         						"displayName":"Map output records",
+									         						"value":500000000
+									         					},
+									         					{
+									         						 "name":"MAP_OUTPUT_BYTES",
+									         						 "displayName":"Map output bytes",
+									         						 "value":51000000000
+									         				    },
+									         				    {
+									         				    	  "name":"MAP_OUTPUT_MATERIALIZED_BYTES",
+									         				    	  "displayName":"Map output materialized bytes",
+									         				    	  "value":14535506449
+									         				    },
+									         				    {
+									         				     	   "name":"SPLIT_RAW_BYTES",
+									         				     	   "displayName":"Input split bytes",
+									         				     	   "value":50304
+									         				     },
+									         				     {
+									         				     		"name":"COMBINE_INPUT_RECORDS",
+									         				     		"displayName":"Combine input records",
+									         				     		"value":0
+									         				     },
+									         				     {
+									         				     		 "name":"COMBINE_OUTPUT_RECORDS",
+									         				     		 "displayName":"Combine output records",
+									         				     		 "value":0
+									         				     },
+									         				     {
+									         				     		  "name":"REDUCE_INPUT_GROUPS",
+									         				     		  "displayName":"Reduce input groups",
+									         				     		  "value":500000000
+									         				     },
+									         				     {
+									         				     			"name":"REDUCE_SHUFFLE_BYTES",
+									         				     			"displayName":"Reduce shuffle bytes",
+									         				     			"value":14535506449
+									         				     },
+									         				     {
+									         				    			 "name":"REDUCE_INPUT_RECORDS",
+									         				    			 "displayName":"Reduce input records",
+									         				    			 "value":500000000
+									         				     },
+									         				     {
+									         				     			 "name":"REDUCE_OUTPUT_RECORDS",
+									         				     			 "displayName":"Reduce output records",
+									         				     			 "value":500000000
+									         				     },
+									         				     {		
+									         				     			 "name":"SPILLED_RECORDS",
+									         				     			 "displayName":"Spilled Records",
+									         				     			 "value":1500000000
+									         				     },
+									         				     {
+									         				     			 "name":"SHUFFLED_MAPS",
+									         				     			 "displayName":"Shuffled Maps ",
+									         				     			 "value":76800
+									         				     },
+									         				     {
+									         				     			 "name":"FAILED_SHUFFLE",
+									         				     			 "displayName":"Failed Shuffles",
+									         				     			 "value":0
+									         				     },
+									         				     {
+									         				     			 "name":"MERGED_MAP_OUTPUTS",
+									         				     			 "displayName":"Merged Map outputs",
+									         				     			 "value":76800
+									         				     },
+									         				     {
+									         				     			 "name":"GC_TIME_MILLIS",
+									         				     			 "displayName":"GC time elapsed (ms)",
+									         				     			 "value":997687
+									         				     },
+									         				     {
+									         				     			 "name":"CPU_MILLISECONDS",
+									         				     			 "displayName":"CPU time spent (ms)",
+									         				     			 "value":23880960
+									         				     },
+									         				     {
+									         				     			"name":"PHYSICAL_MEMORY_BYTES",
+									         				     			"displayName":"Physical memory (bytes) snapshot",
+									         				     			"value":162979512320
+									         				     },
+									         				     {
+									         				     			"name":"VIRTUAL_MEMORY_BYTES",
+									         				     			"displayName":"Virtual memory (bytes) snapshot",
+									         				     			"value":426479988736
+									         				     },
+									         				     {
+									         				     			"name":"COMMITTED_HEAP_BYTES",
+									         				     			"displayName":"Total committed heap usage (bytes)",
+									         				     			"value":110684930048
+									         				     }
+									         				]
+									         	},
+									         	{
+									         		"name":"Shuffle Errors",
+									         		"displayName":"Shuffle Errors",
+									         		"counts":[
+									         					{
+									         							"name":"BAD_ID",
+									         							"displayName":"BAD_ID",
+									         							"value":0
+									         					},
+									         					{
+									         							"name":"CONNECTION",
+									         							"displayName":"CONNECTION",
+									         							"value":0
+									         					},
+									         					{
+									         							"name":"IO_ERROR",
+									         							"displayName":"IO_ERROR",
+									         							"value":0
+									         					},
+									         					{	
+									         							"name":"WRONG_LENGTH",
+									         							"displayName":"WRONG_LENGTH",
+									         							"value":0
+									         					},
+									         					{
+									         							"name":"WRONG_MAP",
+									         							"displayName":"WRONG_MAP",
+									         							"value":0
+									         					},
+									         					{
+									         							"name":"WRONG_REDUCE",
+									         							"displayName":"WRONG_REDUCE",
+									         							"value":0
+									         					}
+									         				]
+									         	 },
+									         	 {
+									         	 	  "name":"org.apache.hadoop.mapreduce.lib.input.FileInputFormatCounter",
+									         	 	  "displayName":"File Input Format Counters ",
+									         	 	  "counts":[
+									         	 	  				{
+									         	 	  					"name":"BYTES_READ",
+									         	 	  					"displayName":"Bytes Read",
+									         	 	  					"value":50000000000
+									         	 	  				 }
+									         	 	  			]
+									         	 },
+									         	 {
+									         	 		"name":"org.apache.hadoop.mapreduce.lib.output.FileOutputFormatCounter",
+									         	 		"displayName":"File Output Format Counters ",
+									         	 		"counts":[
+									         	 					{
+									         	 						"name":"BYTES_WRITTEN",
+									         	 						"displayName":"Bytes Written",
+									         	 						"value":50000000000
+									         	 					}
+									         	 				]
+									         	 }
+									     ]//group
+									},//total Counters
+							"mapCounters":
+									{
+											"name":"MAP_COUNTERS",
+											"groups":[
+														{
+														"name":"org.apache.hadoop.mapreduce.FileSystemCounter",
+														"displayName":"File System Counters",
+														"counts":[
+																 {
+																	"name":"FILE_BYTES_READ",
+																	"displayName":"FILE: Number of bytes read",
+																	"value":14794773130
+																 },
+																 {
+																 		"name":"FILE_BYTES_WRITTEN",
+																 		"displayName":"FILE: Number of bytes written",
+																 		"value":29056029133
+																 },
+																 {
+																 "name":"FILE_READ_OPS",
+																 "displayName":"FILE: Number of read operations",
+																 "value":0},
+																 {"name":"FILE_LARGE_READ_OPS",
+																 "displayName":"FILE: Number of large read operations",
+																 "value":0},
+																 {"name":"FILE_WRITE_OPS",
+																 "displayName":"FILE: Number of write operations",
+																 "value":0},
+																 {"name":"HDFS_BYTES_READ",
+																 "displayName":"HDFS: Number of bytes read",
+																 "value":50000050304},
+																 {"name":"HDFS_BYTES_WRITTEN",
+																 "displayName":"HDFS: Number of bytes written",
+																 "value":0},
+																 {"name":"HDFS_READ_OPS",
+																 "displayName":"HDFS: Number of read operations","value":1152},
+																 {"name":"HDFS_LARGE_READ_OPS","displayName":"HDFS: Number of large read operations","value":0},
+																 {"name":"HDFS_WRITE_OPS","displayName":"HDFS: Number of write operations","value":0}]},
+																 
+																 {"name":"org.apache.hadoop.mapreduce.TaskCounter","displayName":"Map-Reduce Framework","counts":[{"name":"MAP_INPUT_RECORDS","displayName":"Map input records","value":500000000},{"name":"MAP_OUTPUT_RECORDS","displayName":"Map output records","value":500000000},{"name":"MAP_OUTPUT_BYTES","displayName":"Map output bytes","value":51000000000},{"name":"MAP_OUTPUT_MATERIALIZED_BYTES","displayName":"Map output materialized bytes","value":14535506449},{"name":"SPLIT_RAW_BYTES","displayName":"Input split bytes","value":50304},{"name":"COMBINE_INPUT_RECORDS","displayName":"Combine input records","value":0},{"name":"SPILLED_RECORDS","displayName":"Spilled Records","value":1000000000},{"name":"FAILED_SHUFFLE","displayName":"Failed Shuffles","value":0},{"name":"MERGED_MAP_OUTPUTS","displayName":"Merged Map outputs","value":0},{"name":"GC_TIME_MILLIS","displayName":"GC time elapsed (ms)","value":429715},{"name":"CPU_MILLISECONDS","displayName":"CPU time spent (ms)","value":14383900},{"name":"PHYSICAL_MEMORY_BYTES","displayName":"Physical memory (bytes) snapshot","value":102468755456},{"name":"VIRTUAL_MEMORY_BYTES","displayName":"Virtual memory (bytes) snapshot","value":278380204032},{"name":"COMMITTED_HEAP_BYTES","displayName":"Total committed heap usage (bytes)","value":74586914816}]},{"name":"org.apache.hadoop.mapreduce.lib.input.FileInputFormatCounter","displayName":"File Input Format Counters ","counts":[{"name":"BYTES_READ","displayName":"Bytes Read","value":50000000000}]}]
+									},
+							"reduceCounters":
+									{
+											"name":"REDUCE_COUNTERS",
+											"groups":[{"name":"org.apache.hadoop.mapreduce.FileSystemCounter","displayName":"File System Counters","counts":[{"name":"FILE_BYTES_READ","displayName":"FILE: Number of bytes read","value":14842126085},{"name":"FILE_BYTES_WRITTEN","displayName":"FILE: Number of bytes written","value":14861777979},{"name":"FILE_READ_OPS","displayName":"FILE: Number of read operations","value":0},{"name":"FILE_LARGE_READ_OPS","displayName":"FILE: Number of large read operations","value":0},{"name":"FILE_WRITE_OPS","displayName":"FILE: Number of write operations","value":0},{"name":"HDFS_BYTES_READ","displayName":"HDFS: Number of bytes read","value":0},{"name":"HDFS_BYTES_WRITTEN","displayName":"HDFS: Number of bytes written","value":50000000000},{"name":"HDFS_READ_OPS","displayName":"HDFS: Number of read operations","value":600},{"name":"HDFS_LARGE_READ_OPS","displayName":"HDFS: Number of large read operations","value":0},{"name":"HDFS_WRITE_OPS","displayName":"HDFS: Number of write operations","value":400}]},{"name":"org.apache.hadoop.mapreduce.TaskCounter","displayName":"Map-Reduce Framework","counts":[{"name":"COMBINE_INPUT_RECORDS","displayName":"Combine input records","value":0},{"name":"COMBINE_OUTPUT_RECORDS","displayName":"Combine output records","value":0},{"name":"REDUCE_INPUT_GROUPS","displayName":"Reduce input groups","value":500000000},{"name":"REDUCE_SHUFFLE_BYTES","displayName":"Reduce shuffle bytes","value":14535506449},{"name":"REDUCE_INPUT_RECORDS","displayName":"Reduce input records","value":500000000},{"name":"REDUCE_OUTPUT_RECORDS","displayName":"Reduce output records","value":500000000},{"name":"SPILLED_RECORDS","displayName":"Spilled Records","value":500000000},{"name":"SHUFFLED_MAPS","displayName":"Shuffled Maps ","value":76800},{"name":"FAILED_SHUFFLE","displayName":"Failed Shuffles","value":0},{"name":"MERGED_MAP_OUTPUTS","displayName":"Merged Map outputs","value":76800},{"name":"GC_TIME_MILLIS","displayName":"GC time elapsed (ms)","value":567972},{"name":"CPU_MILLISECONDS","displayName":"CPU time spent (ms)","value":9497060},{"name":"PHYSICAL_MEMORY_BYTES","displayName":"Physical memory (bytes) snapshot","value":60510756864},{"name":"VIRTUAL_MEMORY_BYTES","displayName":"Virtual memory (bytes) snapshot","value":148099784704},{"name":"COMMITTED_HEAP_BYTES","displayName":"Total committed heap usage (bytes)","value":36098015232}]},{"name":"Shuffle Errors","displayName":"Shuffle Errors","counts":[{"name":"BAD_ID","displayName":"BAD_ID","value":0},{"name":"CONNECTION","displayName":"CONNECTION","value":0},{"name":"IO_ERROR","displayName":"IO_ERROR","value":0},{"name":"WRONG_LENGTH","displayName":"WRONG_LENGTH","value":0},{"name":"WRONG_MAP","displayName":"WRONG_MAP","value":0},{"name":"WRONG_REDUCE","displayName":"WRONG_REDUCE","value":0}]},{"name":"org.apache.hadoop.mapreduce.lib.output.FileOutputFormatCounter","displayName":"File Output Format Counters ","counts":[{"name":"BYTES_WRITTEN","displayName":"Bytes Written","value":50000000000}]}]
+									}
+				}
+		}
+}
