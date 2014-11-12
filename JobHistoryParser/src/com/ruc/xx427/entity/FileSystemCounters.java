@@ -1,7 +1,7 @@
 package com.ruc.xx427.entity;
 /*
  * ClassName : FileSystemCounters
- * Author 	 : xiaohua / juwei
+ * Author 	 : xiaohua / juwei / jiaheng
  * Time      : 2014/11/5 18:38
  * Use       : store the contents of the File System Counter
  */
