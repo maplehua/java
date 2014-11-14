@@ -1,12 +1,12 @@
-package com.ruc.xx437.profile;
+package com.ruc.xx427.profile;
 
 import java.util.ArrayList;
 import java.util.Map;
 
 import com.ruc.xx427.entity.JobHistoryRecord;
-import com.ruc.xx437.profile.dag.JobDAG;
-import com.ruc.xx437.profile.data.DataProfile;
-import com.ruc.xx437.profile.rsc.ResourceProfile;
+import com.ruc.xx427.profile.dag.JobDAG;
+import com.ruc.xx427.profile.data.DataProfile;
+import com.ruc.xx427.profile.rsc.ResourceProfile;
 
 public class YarnDAGProfiles implements IProfiles{
 	

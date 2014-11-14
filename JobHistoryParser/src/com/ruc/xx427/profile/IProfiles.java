@@ -1,9 +1,9 @@
-package com.ruc.xx437.profile;
+package com.ruc.xx427.profile;
 
 import com.ruc.xx427.entity.JobHistoryRecord;
-import com.ruc.xx437.profile.dag.JobDAG;
-import com.ruc.xx437.profile.data.DataProfile;
-import com.ruc.xx437.profile.rsc.ResourceProfile;
+import com.ruc.xx427.profile.dag.JobDAG;
+import com.ruc.xx427.profile.data.DataProfile;
+import com.ruc.xx427.profile.rsc.ResourceProfile;
 /**
  * 
  * Description: the interface of querying (so it does not include the generation interface of 

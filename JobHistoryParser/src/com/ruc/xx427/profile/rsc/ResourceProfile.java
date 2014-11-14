@@ -1,4 +1,4 @@
-package com.ruc.xx437.profile.rsc;
+package com.ruc.xx427.profile.rsc;
 /**
  * 
  * Description: the system profile of the cluster

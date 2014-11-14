@@ -2,7 +2,7 @@ package com.ruc.xx427.optimizer;
 
 import java.util.Map;
 
-import com.ruc.xx437.profile.dag.JobNode;
+import com.ruc.xx427.profile.dag.JobNode;
 
 public abstract class AbstractDAGOptimizer implements IDAGOptimizer {
 	/**

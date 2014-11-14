@@ -1,4 +1,4 @@
-package com.ruc.xx437.profile.data;
+package com.ruc.xx427.profile.data;
 /**
  * 
  * Description: the profile entity for data from a given path
