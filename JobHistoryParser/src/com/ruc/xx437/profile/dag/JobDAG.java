@@ -15,7 +15,8 @@ import java.util.List;
 public class JobDAG {
 	
 	private JobNode jobRoot;
-	private HashMap<JobNode, List<JobNode>> jobGraph;
+	private HashMap<JobNode, List<JobNode>> childrenGraph;
+	private HashMap<JobNode, List<JobNode>> parantsGraph;
 
 	public JobDAG(String dagPath){		
 		this.readFromFile(dagPath);
@@ -26,11 +27,17 @@ public class JobDAG {
 	}
 	
 	public List<JobNode> getChilds(JobNode node){
-		return this.jobGraph.get(node.getJobName());
+		return this.childrenGraph.get(node.getJobName());
 	}
 	
+	public List<JobNode> getParants(JobNode node){
+		return this.parantsGraph.get(node.getJobName());
+	}
+	
+	
+	
 	private void readFromFile(String dagPath){	
-		jobGraph = new HashMap<JobNode, List<JobNode>> ();
+		childrenGraph = new HashMap<JobNode, List<JobNode>> ();
 		//TODO @xiaohua read the DAG (jobRoot and jobGraph) from the file with pre-defeind format
 		
 	}
