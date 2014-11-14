@@ -16,27 +16,32 @@ import com.ruc.xx427.invertedIndex.InvertedIndex;
  */
 public class SearchJobHistory {
 
+	private static final long MAX  =2000000000; 
+	
 	/*
 	 * @param  : jobName , search the history by the jobname and find the one the most beside the size
 	 * @param  : size , jobSize
-	 * @return : void
+	 * @return : JobHistoryRecord, if failed, return null
 	 */
-	public static void searchHistory(Map<String, ArrayList<Long>> index, String jobName, long size) {
+	public static JobHistoryRecord searchHistory(Map<String, ArrayList<Long>> index, String jobName, long size) {
 		try {
 			if (index.containsKey(jobName)) {
+				long deta = SearchJobHistory.MAX;
+				JobHistoryRecord tmpValue = new JobHistoryRecord();;// to store the tmp result
 				ArrayList<Long> value = index.get(jobName);
 				for (int i = 0 ; i < value.size(); i++) {
-					System.out.println(value.get(i));
 					JobHistoryRecord jobTmp = JobHistoryRecord.read(value.get(i));
-					jobTmp.getFileSystemCounters().printFileSystemCounters();
-					System.out.println("----------------------------");
+					if (jobTmp.getJobSize() - size < deta) {
+						deta = jobTmp.getJobSize() - size;
+						tmpValue = jobTmp;
+					}	
 				}
-			} else {
-				System.out.println("Not Found");
-			}
+				return tmpValue;
+			} 
 		} catch(IOException e) {
 			e.printStackTrace();
 		}
+		return null;
 	}
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
@@ -47,7 +52,10 @@ public class SearchJobHistory {
 			System.out.print("Please input the jobName and jobSize :  ");
 			String jobName = scan.next();
 			long jobSize = scan.nextLong();
-			searchHistory(index, jobName, jobSize);
+			JobHistoryRecord tmp = searchHistory(index, jobName, jobSize);
+			tmp.getFileSystemCounters().printFileSystemCounters();
+			tmp.getMapReduceFramework().printMapReduceFramework();
+			System.out.println(tmp.getJobSize());
 		}
 	}
 
