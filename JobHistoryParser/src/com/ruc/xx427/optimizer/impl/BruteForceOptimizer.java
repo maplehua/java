@@ -48,7 +48,7 @@ public class BruteForceOptimizer extends AbstractDAGOptimizer {
 	 * 
 	 * @param dagProfiles
 	 * @return the estimated time cost (//TODO add the trace of state transition
-	 *         for test @xiaohua or @Juwei)
+	 *         for test @xiaohua)
 	 */
 	public float estimateCost(YarnDAGProfiles dagProfiles) {
 
@@ -77,6 +77,7 @@ public class BruteForceOptimizer extends AbstractDAGOptimizer {
 				} else if (stage == JobStage.MAP) {
 					jobQueue.get(endJSNode).setJobStage(JobStage.HYBRID);
 				} else {
+					//XXX do we need to consider the case that slow-start=1 thus no hyrid?
 					jobQueue.get(endJSNode).setJobStage(JobStage.REDUCE);
 				}
 			}
