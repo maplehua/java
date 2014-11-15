@@ -1,7 +1,7 @@
 package com.ruc.xx427.entity;
 /*
  * ClassName : FileSystemCounters
- * Author 	 : xiaohua
+ * Author 	 : xiaohua 
  * Time      : 2014/11/5 18:38
  * Use       : store the contents of the File System Counter
  */
@@ -26,7 +26,7 @@ public class FileSystemCounters {
 		for (int i = 0; i< NUM; i++) {
 			System.out.print(file_number_read[i]+"\t");
 		}
-		System.out.println();
+		System.out.println(); 
 		
 		System.out.print("FILE: Number of bytes written"+"\t");
 		for (int i = 0; i< NUM; i++) {
