@@ -1,6 +1,6 @@
 package com.ruc.xx427.profile;
 
-import com.ruc.xx427.entity.JobHistoryRecord;
+import com.ruc.xx427.job.entity.JobHistoryRecord;
 import com.ruc.xx427.profile.dag.JobDAG;
 import com.ruc.xx427.profile.data.DataProfile;
 import com.ruc.xx427.profile.rsc.ResourceProfile;
