@@ -8,8 +8,6 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.StringTokenizer;
 
-import com.ruc.xx427.property.Property;
-
 /*
  * read from jobNodeInfo file set all the information into a map
  * @author: Xiaohua
