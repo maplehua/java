@@ -1,0 +1,7 @@
+Job1 hdfs://10.77.50.165:9000/terasort/10000000-input false
+Job2 hdfs://10.77.50.165:9000/terasort/10000000-input false
+Job3 hdfs://10.77.50.165:9000/terasort/10000000-input false
+Job4 hdfs://10.77.50.165:9000/terasort/10000000-input false
+Job5 hdfs://10.77.50.165:9000/terasort/10000000-input false
+Job6 hdfs://10.77.50.165:9000/terasort/10000000-input false
+Job7 hdfs://10.77.50.165:9000/terasort/10000000-input false

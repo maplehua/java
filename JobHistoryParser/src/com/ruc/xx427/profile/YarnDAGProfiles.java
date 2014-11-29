@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Map;
 
 import com.ruc.xx427.job.entity.JobHistoryRecord;
+import com.ruc.xx427.job.invertedIndex.InvertedIndex;
+import com.ruc.xx427.job.search.SearchJobHistory;
 import com.ruc.xx427.profile.dag.JobDAG;
 import com.ruc.xx427.profile.data.DataProfile;
 import com.ruc.xx427.profile.rsc.ResourceProfile;
@@ -16,7 +18,7 @@ public class YarnDAGProfiles implements IProfiles{
 	
 	public YarnDAGProfiles(String dagPath){
 		this.jobDAG = new JobDAG(dagPath);
-		this.jobIndex = null; //TODO @xiaohua add the init of index from config files
+		this.jobIndex = InvertedIndex.createIndex(); //TODO @xiaohua add the init of index from config files
 	}
 
 	@Override
@@ -27,14 +29,19 @@ public class YarnDAGProfiles implements IProfiles{
 	@Override
 	public JobHistoryRecord findJobHistoryProfile(String jobName,
 			String inputPath) {
-		// TODO Auto-generated method stub
-		return null;
+		//inputPath -> get the job size -> search(jobname, size)
+		//how to read the size according to the job input path
+		DataProfile dataProfile = new DataProfile();
+		dataProfile = dataProfile.setDataInfo(inputPath);
+		long jobSize = dataProfile.getDataSize();	
+		return SearchJobHistory.searchHistory(jobIndex, jobName, jobSize);
 	}
 
 	@Override
 	public DataProfile getDataProfile(String inputPath) {
-		// TODO Auto-generated method stub
-		return null;
+		//add by xiaohua at 2014/11/29
+		DataProfile dataProfile = new DataProfile();
+		return dataProfile.setDataInfo(inputPath);
 	}
 
 	@Override
@@ -43,7 +50,4 @@ public class YarnDAGProfiles implements IProfiles{
 		return null;
 	}
 	
-
-	
-
 }

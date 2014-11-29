@@ -24,6 +24,7 @@ public class SearchJobHistory {
 	 * @return : JobHistoryRecord, if failed, return null
 	 */
 	public static JobHistoryRecord searchHistory(Map<String, ArrayList<Long>> index, String jobName, long size) {
+		JobHistoryRecord.init();
 		try {
 			if (index.containsKey(jobName)) {
 				long deta = SearchJobHistory.MAX;
