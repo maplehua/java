@@ -8,9 +8,9 @@ import java.util.Set;
 import org.apache.hadoop.mapred.JobConf;
 
 import com.ruc.xx427.optimizer.AbstractDAGOptimizer;
-import com.ruc.xx427.optimizer.FlowFactors;
-import com.ruc.xx427.optimizer.JobStage;
-import com.ruc.xx427.optimizer.JobState;
+import com.ruc.xx427.optimizer.model.FlowFactors;
+import com.ruc.xx427.optimizer.model.JobStage;
+import com.ruc.xx427.optimizer.model.JobState;
 import com.ruc.xx427.profile.YarnDAGProfiles;
 import com.ruc.xx427.profile.dag.JobNode;
 
@@ -34,7 +34,7 @@ public class BruteForceOptimizer extends AbstractDAGOptimizer {
 		FlowFactors bestFlowFactors = null;
 		for (FlowFactors flowFactors : flowFactorsSet) {
 			YarnDAGProfiles dagProfiles = new YarnDAGProfiles(dagPath);
-			curCost = this.estimateCost(dagProfiles);
+			curCost = this.estimateCost(dagProfiles, flowFactors);
 			if (curCost < minCost) {
 				minCost = curCost;
 				bestFlowFactors = flowFactors;
@@ -50,12 +50,15 @@ public class BruteForceOptimizer extends AbstractDAGOptimizer {
 	 * @return the estimated time cost (//TODO add the trace of state transition
 	 *         for test @xiaohua)
 	 */
-	public float estimateCost(YarnDAGProfiles dagProfiles) {
+	public float estimateCost(YarnDAGProfiles dagProfiles,
+			FlowFactors flowFactors) {
 
 		Map<JobNode, JobState> jobQueue = new HashMap<JobNode, JobState>();
 		float flowTime = 0;
 		// add the root job
-		JobState rootState = new JobState(JobStage.MAP, 0, 1, 1, 0, 1);
+		JobState rootState = null; // TODO new JobSate
+		// XXX the job state will be updated later
+
 		jobQueue.put(dagProfiles.getJobDAG().getRoot(), rootState);
 
 		while (jobQueue.size() > 0) {
@@ -63,7 +66,7 @@ public class BruteForceOptimizer extends AbstractDAGOptimizer {
 			JobNode endJSNode = null;
 			while (!jobEndFlag) {
 				this.updateShareStates(jobQueue);
-				endJSNode = this.estimateTransTime(jobQueue);
+				endJSNode = this.estimateTransTime(jobQueue, flowFactors);
 				// we can get transition time of this node from jobQueue, so
 				// there is not need to explicitly get the transition time.
 				this.updateProgress(endJSNode, jobQueue);
@@ -77,7 +80,9 @@ public class BruteForceOptimizer extends AbstractDAGOptimizer {
 				} else if (stage == JobStage.MAP) {
 					jobQueue.get(endJSNode).setJobStage(JobStage.HYBRID);
 				} else {
-					//XXX do we need to consider the case that slow-start=1 thus no hyrid?
+					// XXX do we need to consider the case that slow-start=1
+					// thus no hybrid? It can be covered by hybrid stage time
+					// estimation (=0)
 					jobQueue.get(endJSNode).setJobStage(JobStage.REDUCE);
 				}
 			}
@@ -95,8 +100,9 @@ public class BruteForceOptimizer extends AbstractDAGOptimizer {
 					}
 				}
 				if (canStart) {
-					jobQueue.put(childNode, new JobState(JobStage.MAP, 0, 0, 0,
-							0, 0));
+					jobQueue.put(childNode, null);
+					// TODO new JobState(JobStage.MAP, 0, 0, null)
+					// the jobState will be updated later
 				}
 			}
 
@@ -110,9 +116,9 @@ public class BruteForceOptimizer extends AbstractDAGOptimizer {
 	 * @return
 	 */
 	private Map<String, JobConf> fromFactorsToConfigs(FlowFactors factors) {
-		
+
 		Map<String, JobConf> jobConfMap = new HashMap<String, JobConf>();
-		
+
 		// TODO @juwei from factors to configurations
 		return jobConfMap;
 

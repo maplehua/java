@@ -1,4 +1,4 @@
-package com.ruc.xx427.optimizer;
+package com.ruc.xx427.optimizer.model;
 
 import java.util.HashMap;
 import java.util.Map;

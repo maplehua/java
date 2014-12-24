@@ -37,6 +37,11 @@ public class JobHistoryRecord {
 	private static RandomAccessFile raf_counter;
 	private static RandomAccessFile raf_meta;
 	
+	//estimated map and reduce time (added by Juwei)
+	//XXX if we want to remove these fields out of JobHistoryRecord
+	private float mapFunTime; //map function, sort, and compress tim, MB/sec
+	private float reduceFunTime; //reduce and decompress time, MB/sec
+	
 	public static void init() {
 		try {
 			raf_counter = new RandomAccessFile(new File(jobCounterFile), "rw");
@@ -83,6 +88,22 @@ public class JobHistoryRecord {
 	}
 	public void setJobSize(long jobSize) {
 		JobSize = jobSize;
+	}
+	
+	public float getMapFunTime() {
+		return mapFunTime;
+	}
+
+	public void setMapFunTime(float mapFunTime) {
+		this.mapFunTime = mapFunTime;
+	}
+
+	public float getReduceFunTime() {
+		return reduceFunTime;
+	}
+
+	public void setReduceFunTime(float reduceFunTime) {
+		this.reduceFunTime = reduceFunTime;
 	}
 	
 	

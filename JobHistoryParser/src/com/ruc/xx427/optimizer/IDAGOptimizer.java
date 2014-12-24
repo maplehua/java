@@ -18,5 +18,6 @@ public interface IDAGOptimizer {
     
 	public Map<String, JobConf> optimize(String dagPath); //XXX change JobConf to generic if we want to support Spark
 
+	
 
 }
